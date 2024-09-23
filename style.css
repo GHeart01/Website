@@ -5,7 +5,8 @@ body {
     margin: 0%;
     padding:0;
 }
-h1 {
+ 
+h1{
 text-align: center;
 text-shadow: 5px 5px #FFFFFF; 
 font-size: 10em;
@@ -14,9 +15,10 @@ margin-top: 0px;
 margin-bottom: 0px;
 padding: 0px 10%;
 }
-h2 {
+h2.Intro {
     color: white;
     opacity: 0.9;
+    margin-left: 10%;
 }
 button {
     background: #964734;
@@ -36,6 +38,14 @@ section{
     display: flex;
     flex-direction: row;
 } 
+section.Degree{
+    color: red;
+    margin-bottom: 10px;
+}
+section.Languages{
+    color: white;
+}   
+
 div {
     background: #0FA4AF;
     margin: 10px;
@@ -53,8 +63,11 @@ ul{
 }
 
 li{
-    display: inline-block;
+    display: block;
     margin-right: 20px;
+}
+li.hover {
+    background-color: red;
 }
 footer{
     background: black;
@@ -62,4 +75,23 @@ footer{
 }
 p{
     color: white;
+}
+li:active{
+    text-decoration: none;
+}
+li:hover {
+    text-decoration: underline;
+}
+p.github {
+    color: white;
+    background-color: #0FA4AF;
+    background-size: auto;
+    margin-left: 5%;
+    text-decoration: underline;
+}
+
+section div{
+    background: gray;
+    width: 100%;
+    margin: 1px;
 }
