@@ -62,17 +62,20 @@ ul{
     list-style-type: none;
 }
 
-li{
-    display: block;
-    margin-right: 20px;
+li {
+    text-align:  center;
+
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center;    /* Centers children horizontally */
+}
+li.text-center {
+    text-align:  center;
 }
 li.hover {
     background-color: red;
 }
-footer{
-    background: black;
-    padding: 10px 20px;
-}
+
 p{
     color: white;
 }
@@ -94,4 +97,18 @@ section div{
     background: gray;
     width: 100%;
     margin: 1px;
+}
+footer{
+    background: black;
+    padding: 10px 20px;
+}
+
+/* Responsible rules */
+@media screeen and (){
+
+}
+
+.education-img {
+    width: 100px; /* Adds a colon here */
+    height: auto; /* This ensures the aspect ratio is maintained */
 }
