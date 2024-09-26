@@ -2,23 +2,34 @@ body {
     background: #003135;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    margin: 0%;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers all elements */
+    justify-content: center; /* Vertically centers all elements */
+    min-height: 100vh; /* Ensures the body takes the full viewport height */
+    text-align: center;
 }
- 
-h1{
-text-align: center;
-text-shadow: 5px 5px #FFFFFF; 
-font-size: 10em;
-color: #AFDDE5;
-margin-top: 0px;
-margin-bottom: 0px;
-padding: 0px 10%;
+
+h1 {
+    text-align: center;
+    text-shadow: 5px 5px #FFFFFF;
+    font-size: 6vw; /* Font-size changes with viewport width */
+    color: #AFDDE5;
+    margin: 0;
+    padding: 0 5%;
+}
+
+.education-img {
+    width: 100%; /* Make image responsive */
+    max-width: 150px; /* Limits maximum width */
+    height: auto;
 }
 h2.Intro {
     color: white;
     opacity: 0.9;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 button {
     background: #964734;
@@ -31,15 +42,21 @@ header{
     margin: 20px 10px 20px 10px;
     padding: 20px 40px;
 }
-section{
-    background: #024950;
-    color: gray;
-    padding: 20px;
+section {
     display: flex;
-    flex-direction: row;
-} 
+    flex-direction: column; /* Stack items vertically on small screens */
+    padding: 20px;
+    
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+    }
+}
+
 section.Degree{
-    color: red;
+    color: #0FA4AF;
     margin-bottom: 10px;
 }
 section.Languages{
@@ -63,8 +80,7 @@ ul{
 }
 
 li {
-    text-align:  center;
-
+    
     display: flex;
     flex-direction: column; /* Aligns children vertically */
     align-items: center;    /* Centers children horizontally */
@@ -99,16 +115,48 @@ section div{
     margin: 1px;
 }
 footer{
+    margin-top: 20px;
     background: black;
     padding: 10px 20px;
 }
 
 /* Responsible rules */
-@media screeen and (){
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw; /* Adjusts font size for small screens */
+    }
 
+    h2.Intro {
+        margin-left: 5%; /* Reduces margins on small screens */
+    }
+
+    .education-img {
+        max-width: 100px;
+    }
 }
 
-.education-img {
-    width: 100px; /* Adds a colon here */
-    height: auto; /* This ensures the aspect ratio is maintained */
+@media (min-width: 600px) and (max-width: 1200px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .education-img {
+        max-width: 125px;
+    }
+    .github-img {
+        max-width: 100px;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
