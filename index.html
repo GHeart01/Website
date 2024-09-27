@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Geralt Heart</title>
+        <meta name="description" content="Geralt Heart's personal portfolio website showcasing projects, education, and contact information.">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="websiteicon/nodes.png" type="image/png">
     </head>
     <body>
         <header>
@@ -17,26 +19,24 @@
 
         <h1>Hello</h1>
         <h2 class="Intro">I'm Geralt Heart</h2>
+        <h2>Projects</h2>
         <p class="github">
             <a href="https://github.com/GHeart01"> 
                 <picture>
-
-
                     <source media="(max-width: 600px)" srcset="githubicon/github-mark.png">
                     <source media="(min-width: 601px)" srcset="githubicon/github-mark.png">
-                    <img src="blinn.png" class="github-img">
+                    <img src="githubicon/github-mark.png" class="github-img" alt="GitHub Mark">
                 </picture>
-
+        
                 <picture>
                     <source media="(max-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
-                        
                     <source media="(min-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
-                    <img src="blinn.png"  class="github-img">
+                    <img src="githubicon/GitHub_Logo.png" class="github-img" alt="GitHub Logo">
                 </picture>
             </a>
         </p>
 
-        <h2>Projects</h2>
+
         <h3>Languages</h3>
         <section class="Languages">
             <ul>
@@ -56,35 +56,44 @@
                     <a href="https://www.blinn.edu/">
                         <picture>
                             <source media="(max-width: 600px)" srcset="small-blinn.png">
-                            <source media="(min-width: 601px)" srcset="blinn.png">
-                            <img src="blinn.png" alt="Blinn College" class="education-img">
+                            <source media="(min-width: 601px)" srcset="educationemblems/blinn.png">
+                            <img src="educationemblems/blinn.png" alt="Blinn College" class="education-img">
                         </picture>
                     </a>
                 </li>
                 <li>
                     Bachelors of Science in Mathematics 
                     <a href="https://www.utrgv.edu/">
-                        <img src="utrgv-logo.svg" class="education-img">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png">
+                            <source media="(min-width: 601px)" srcset="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png">
+                            <img src="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png" class="education-img" alt="UTRGV Logo">
+                        </picture>
                     </a>
                 </li>
                 <li>
                     Associates of Science in Engineering 
+
                     <a href="https://www.southtexascollege.edu/">
-                        <img src="STC-Primary.png" class="education-img">
+                        <source media="(max-width: 600px)" srcset="educationemblems/STC-Primary.png">
+                        <source media="(min-width: 601px)" srcset="educationemblems/STC-Primary.png">
+                        <img src="educationemblems/STC-Primary.png" class="education-img">
                     </a>
                 </li>
                 <li>
                     Masters of Data Science (In Progress) 
                     <a href="https://www.utexas.edu/">
-                        <img src="University_of_Texas_at_Austin_seal.svg.png" class="education-img">
+                        <source media="(max-width: 600px)" srcset="educationemblems/University_of_Texas_at_Austin_seal.svg.png">
+                        <source media="(min-width: 601px)" srcset="educationemblems/University_of_Texas_at_Austin_seal.svg.png">
+                        <img src="educationemblems/University_of_Texas_at_Austin_seal.svg.png" class="education-img">
                     </a>
                 </li>
             </ol>
         </section>
 
         <footer>
-            <p>Contact me for information</p>
-            <button>Contact me</button>
-        </footer>
+            <p>© 2024 Geralt Heart</p>
+            <p>Contact me for more information</p>        
+            <button onclick="window.location.href='contact.html'">Contact me</button>        </footer>
     </body>
 </html>
