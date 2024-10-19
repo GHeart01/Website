@@ -116,14 +116,55 @@ section {
     }
 }
 
+/* Center the Education List Items */
 section.Degree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: #0FA4AF;
     margin-bottom: 10px;
 }
 
+section.Degree ol {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+section.Degree li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space between the list items */
+}
+
+/* Center the Languages List Items */
 section.Languages {
-    color: white;
-}   
+    display: flex;
+    justify-content: center;
+}
+
+section.Languages ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+section.Languages li {
+    text-align: center; /* Center the text inside list items */
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Adjust the image centering */
+.education-img {
+    display: block;
+    margin: 10px auto; /* Center the images horizontally */
+}
 
 div {
     background: #0FA4AF;
