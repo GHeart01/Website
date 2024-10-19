@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geralt Heart - Contact</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/GHeart01">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Message Me</h2>
+            <p>
+                Email: 
+                <a href="mailto:geraltheart01@gmail.com">geraltheart01@gmail.com</a>
+            </p>
+           
+            <section class="lower-section">
+
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                
+                    <button type="submit">Send Message</button>
+                </form>
+                
+                <script>
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent the default form submission
+                
+                        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                            .then(function() {
+                                alert('Message sent successfully!');
+                            }, function(error) {
+                                alert('Failed to send message. Please try again later.');
+                            });
+                    });
+                </script>
+            </section>
+            <h2>or look at my profile on other websites</h2>
+            <p>
+                GitHub: 
+                <a href="https://github.com/GHeart01" target="_blank">GHeart01</a>
+            </p>
+
+            <p>
+                LinkedIn: 
+                <a href="https://www.linkedin.com/in/geralt-heart-b8a8212b6/" target="_blank">Geralt Heart on LinkedIn</a>
+            </p>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Geralt Heart. All Rights Reserved.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+            <script>
+            (function(){
+                emailjs.init("YOUR_PUBLIC_KEY"); // Replace this with your EmailJS public key
+            })();
+            </script>
+    </body>
+</html>

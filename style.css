@@ -1,0 +1,298 @@
+/* General reset and full-width settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #000000;
+    color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Ensures the body takes the full viewport height */
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 5px 5px #FFFFFF;
+    font-size: 6vw; /* Font-size changes with viewport width */
+    color: #AFDDE5;
+    margin: 0;
+    padding: 0 5%;
+}
+
+.image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: to visualize container */
+}
+
+.education-img {
+    width: 150px; /* Ensures the width is consistent for all images */
+    height: 150px; /* Ensures the height is consistent for all images */
+    object-fit: contain; /* Ensures the images fit within the container without stretching */
+    background-color: transparent; /* To avoid any background color issues */
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Styling for introduction heading */
+h2.Intro {
+    color: white;
+    opacity: 0.9;
+    margin-left: 0%;
+}
+
+h4 {
+    text-align: center;
+    font-size: 6vw; /* Font-size changes with viewport width */
+    color: #AFDDE5;
+    margin: 0;
+    padding: 0 5%;
+}
+/* Button styles */
+button {
+    background: #964734;
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #AFDDE5;
+    color: black;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #333333; /* Dark background like Apple */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Spacing between logo and nav */
+    align-items: center;
+    padding: 0 40px; /* Padding for breathing room */
+    height: 60px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+header .logo {
+    font-size: 1.5em; /* Apple logo size */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Flexbox section layout */
+section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit section width on large screens */
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+    }
+}
+
+section.Degree {
+    color: #0FA4AF;
+    margin-bottom: 10px;
+}
+
+section.Languages {
+    color: white;
+}   
+
+div {
+    background: #0FA4AF;
+    margin: 10px;
+    width: 100px;
+    height: 50px; /* Added height to make the divs more visible */
+    text-align: center; /* Centers text inside divs */
+    line-height: 50px; /* Vertically centers text in divs */
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center;    /* Centers children horizontally */
+    text-align: center;
+}
+
+li.hover {
+    background-color: red;
+}
+
+p {
+    color: white;
+}
+
+p.github {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Align icons vertically */
+    gap: 10px; /* Add some space between the icons */
+    background-color: #0FA4AF; /* Maintain background color */
+    padding: 10px; /* Add some padding for spacing */
+    margin-left: 0; /* Remove large margin */
+}
+
+.github-img {
+    max-width: 50px; /* Set the maximum width of the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Animation for fade in */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Responsive rules for different screen sizes */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw; /* Adjusts font size for small screens */
+    }
+
+    h2.Intro {
+        margin-left: 5%; /* Reduces margins on small screens */
+    }
+
+    .education-img {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .education-img {
+        max-width: 125px;
+    }
+
+    .github-img {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .github-img {
+        max-width: 30px; /* Smaller icons on small screens */
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .github-img {
+        max-width: 40px; /* Slightly larger on medium screens */
+    }
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Make it grow to fill space */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px; /* Space between links */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 15px 10px; /* Padding for clickable area */
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #b5b5b5; /* Slight color change on hover */
+}
+
+/* Active link styling */
+nav ul li a.active {
+    color: #0FA4AF; /* Active state color */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px; /* Adjust padding on smaller screens */
+    }
+
+    nav ul {
+        gap: 20px; /* Less space between links on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 1.2em; /* Smaller logo */
+    }
+}
+footer {
+    margin-top: 20px;
+    background: black;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
