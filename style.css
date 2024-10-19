@@ -8,83 +8,70 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #000000;
-    color: #F0F0F0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh; /* Ensures the body takes the full viewport height */
-    text-align: center;
+    font-family: Arial, sans-serif; /* Use Arial for consistency */
+    background: rgba(21, 21, 21, 0.8); /* Translucent background color */
+    color: #ffffff; /* Text color */
+}
+
+/* Background image styles */
+.background-image {
+    background-image: url('backgroundimages/MountainHeader.png'); /* Set your background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100vw; /* Ensures the div takes the full viewport width */
+    height: 100vh; /* Ensures the div takes the full viewport height */
+    overflow: hidden; /* Prevents any overflow */
+    position: relative; /* Keep relative for absolute positioning of header */
+}
+
+/* Grey tint overlay */
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.209); /* Grey tint with transparency */
+    z-index: 1; /* Ensure it is below the text but above the image */
+}
+
+/* Adjust the greeting and intro */
+.greeting, .Intro {
+    position: absolute; /* Allows positioning over the background */
+    top: 20%; /* Adjust as needed for vertical spacing */
+    left: 50%; /* Centers text horizontally */
+    transform: translate(-50%, -50%); /* Centers text perfectly */
+    color: #fff; /* Change text color for better visibility */
+    z-index: 2; /* Ensures text is above the background image */
+    text-decoration: underline; /* Underline the text */
+}
+h1, h2 {
+    position: relative; 
+    text-align: left;
+    padding-top: 200px;
+    padding-left: 20px;
+/*add veritcal align with image*/
+    color: white; /* Text color */
+    z-index: 10; /* Ensure text is above the image */
 }
 
 h1 {
-    text-align: center;
-    text-shadow: 5px 5px #FFFFFF;
-    font-size: 6vw; /* Font-size changes with viewport width */
-    color: #AFDDE5;
-    margin: 0;
-    padding: 0 5%;
+    font-size: 6vw; 
+    text-decoration: underline;
 }
 
-.image-container {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; /* Optional: to visualize container */
-}
-
-.education-img {
-    width: 150px; /* Ensures the width is consistent for all images */
-    height: 150px; /* Ensures the height is consistent for all images */
-    object-fit: contain; /* Ensures the images fit within the container without stretching */
-    background-color: transparent; /* To avoid any background color issues */
-}
-
-/* Fade-in effect */
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-/* Styling for introduction heading */
-h2.Intro {
-    color: white;
-    opacity: 0.9;
-    margin-left: 0%;
-}
-
-h4 {
-    text-align: center;
-    font-size: 6vw; /* Font-size changes with viewport width */
-    color: #AFDDE5;
-    margin: 0;
-    padding: 0 5%;
-}
-/* Button styles */
-button {
-    background: #964734;
-    border: none;
-    color: white;
-    border-radius: 12px;
-}
-
-button:hover {
-    background-color: #AFDDE5;
-    color: black;
+h2 {
+    font-size: 4vw; /* Responsive font size */
+    color: #ffffff; /* Subheader color */
 }
 
 header {
-    position: sticky;
+    position: absolute;
     top: 0;
     z-index: 1000;
-    background: #333333; /* Dark background like Apple */
+    background: rgba(51, 51, 51, 0.8); /* Dark background for header with transparency */
     width: 100%;
     display: flex;
     justify-content: space-between; /* Spacing between logo and nav */
@@ -92,186 +79,6 @@ header {
     padding: 0 40px; /* Padding for breathing room */
     height: 60px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-header .logo {
-    font-size: 1.5em; /* Apple logo size */
-    font-weight: bold;
-    color: white;
-    text-align: center;
-}
-
-/* Flexbox section layout */
-section {
-    display: flex;
-    flex-direction: column; /* Stack items vertically on small screens */
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px; /* Limit section width on large screens */
-    margin: auto;
-}
-
-@media (min-width: 768px) {
-    section {
-        flex-direction: row; /* Side-by-side layout on larger screens */
-    }
-}
-
-/* Center the Education List Items */
-section.Degree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #0FA4AF;
-    margin-bottom: 10px;
-}
-
-section.Degree ol {
-    padding: 0;
-    margin: 0;
-    list-style: none; /* Remove default list styling */
-}
-
-section.Degree li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some space between the list items */
-}
-
-/* Center the Languages List Items */
-section.Languages {
-    display: flex;
-    justify-content: center;
-}
-
-section.Languages ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none; /* Remove default list styling */
-}
-
-section.Languages li {
-    text-align: center; /* Center the text inside list items */
-    margin-bottom: 10px; /* Add space between list items */
-}
-
-/* Adjust the image centering */
-.education-img {
-    display: block;
-    margin: 10px auto; /* Center the images horizontally */
-}
-
-div {
-    background: #0FA4AF;
-    margin: 10px;
-    width: 100px;
-    height: 50px; /* Added height to make the divs more visible */
-    text-align: center; /* Centers text inside divs */
-    line-height: 50px; /* Vertically centers text in divs */
-    color: white;
-    font-weight: bold;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-li {
-    display: flex;
-    flex-direction: column; /* Aligns children vertically */
-    align-items: center;    /* Centers children horizontally */
-    text-align: center;
-}
-
-li.hover {
-    background-color: red;
-}
-
-p {
-    color: white;
-}
-
-p.github {
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center icons horizontally */
-    align-items: center; /* Align icons vertically */
-    gap: 10px; /* Add some space between the icons */
-    background-color: #0FA4AF; /* Maintain background color */
-    padding: 10px; /* Add some padding for spacing */
-    margin-left: 0; /* Remove large margin */
-}
-
-.github-img {
-    display: inline-block;
-    max-width: 50px; /* Set the maximum width of the images */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Animation for fade in */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-img:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-/* Responsive rules for different screen sizes */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 8vw; /* Adjusts font size for small screens */
-    }
-
-    h2.Intro {
-        margin-left: 5%; /* Reduces margins on small screens */
-    }
-
-    .education-img {
-        max-width: 100px;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1200px) {
-    h1 {
-        font-size: 5vw;
-    }
-
-    .education-img {
-        max-width: 125px;
-    }
-
-    .github-img {
-        max-width: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .education-img {
-        max-width: 80px;
-    }
-}
-
-@media (max-width: 600px) {
-    .github-img {
-        max-width: 30px; /* Smaller icons on small screens */
-    }
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
-    .github-img {
-        max-width: 40px; /* Slightly larger on medium screens */
-    }
 }
 
 /* Navigation menu */
@@ -282,17 +89,19 @@ nav {
 }
 
 nav ul {
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around; /* Distributes items evenly */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    text-align: center;
     display: flex;
     list-style-type: none;
     gap: 30px; /* Space between links */
 }
 
-nav ul li {
-    display: inline-block;
-}
-
 nav ul li a {
-    color: white;
+    color: #FFFFFF; /* Link color */
     text-decoration: none;
     font-size: 1em;
     padding: 15px 10px; /* Padding for clickable area */
@@ -301,7 +110,7 @@ nav ul li a {
 
 /* Hover effect for navigation links */
 nav ul li a:hover {
-    color: #b5b5b5; /* Slight color change on hover */
+    color: #AFDDE5; /* Slight color change on hover */
 }
 
 /* Active link styling */
@@ -309,8 +118,58 @@ nav ul li a.active {
     color: #0FA4AF; /* Active state color */
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+/* Main content */
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0FA4AF; /* Button background color */
+    color: white;
+    padding: 10px 20px; /* Padding for button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #AFDDE5; /* Button hover color */
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    background: #333; /* Dark background for footer */
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw; /* Adjusts font size for small screens */
+    }
     header {
         padding: 0 20px; /* Adjust padding on smaller screens */
     }
@@ -320,7 +179,7 @@ nav ul li a.active {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -330,11 +189,10 @@ nav ul li a.active {
         font-size: 1.2em; /* Smaller logo */
     }
 }
-footer {
-    margin-top: 20px;
-    background: black;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-    color: white;
+
+/* Adjust the image centering */
+.education-img {
+    display: block;
+    margin: 10px auto; /* Center the images horizontally */
+    max-width: 200px; /* Set a maximum width for education images */
 }

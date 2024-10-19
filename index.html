@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Geralt Heart</title>
-        <meta name="description" content="Geralt Heart's personal portfolio website showcasing projects, education, and contact information.">
-        <link rel="stylesheet" href="style.css">
-        <script src="animations.js"></script>
-        <link rel="icon" href="websiteicon/nodes.png" type="image/png">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="https://github.com/GHeart01">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geralt Heart</title>
+    <meta name="description" content="Geralt Heart's personal portfolio website showcasing projects, education, and contact information.">
+    <link rel="stylesheet" href="style.css">
+    <script src="animations.js"></script>
+    <link rel="icon" href="websiteicon/nodes.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://github.com/GHeart01">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/geralt-heart-b8a8212b6/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h1>Hello</h1>
-        <h2 class="Intro">I'm Geralt Heart</h2>
+    <div class="background-image">
+        <h1 class="welcome-text">Hello, My name is Geralt</h1>
+    </div>
+
+    <main>
         <h2>Projects</h2>
         <p class="github">
             <a href="https://github.com/GHeart01"> 
@@ -27,7 +33,8 @@
                     <source media="(max-width: 600px)" srcset="githubicon/github-mark.png">
                     <source media="(min-width: 601px)" srcset="githubicon/github-mark.png">
                     <img src="githubicon/github-mark.png" class="github-img" alt="GitHub Mark">
-                </picture><picture> 
+                </picture>
+                <picture> 
                     <source media="(max-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
                     <source media="(min-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
                     <img src="githubicon/GitHub_Logo.png" class="github-img" alt="GitHub Logo">
@@ -36,9 +43,8 @@
         </p>
 
         <h3>Languages</h3>
-        <!-- <h2 class="fade-in">I'm Geralt Heart</h2> -->
-        <section class="Languages fade-in">
-            <ul>
+        <section>
+            <ul class="centered-list">
                 <li>Python</li>
                 <li>C/C++</li>
                 <li>HTML/CSS/JS</li>
@@ -48,52 +54,39 @@
 
         <h4>Education</h4>
         <section class="Degree">
-            <ol>
+            <ul class="centered-list">
                 <li>
                     Masters of Data Science (In Progress) 
                     <a href="https://www.colorado.edu/">
-                        <source media="(max-width: 600px)" srcset="educationemblems/ColoradoUniversity.png">
-                        <source media="(min-width: 601px)" srcset="educationemblems/ColoradoUniversity.png">
-                        <img src="educationemblems/ColoradoUniversity.png" class="education-img">
+                        <img src="educationemblems/ColoradoUniversity.png" class="education-img" alt="Colorado University">
                     </a>
                 </li>
                 <li>
                     Bachelors of Science in Mathematics 
                     <a href="https://www.utrgv.edu/">
-                        <picture>
-                            <source media="(max-width: 600px)" srcset="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png">
-                            <source media="(min-width: 601px)" srcset="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png">
-                            <img src="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png" class="education-img" alt="UTRGV Logo">
-                        </picture>
+                        <img src="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png" class="education-img" alt="UTRGV Logo">
                     </a>
                 </li>
                 <li>
                     Associates of Science in Computer Science 
                     <a href="https://www.blinn.edu/">
-                        <picture>
-                            <source media="(max-width: 600px)" srcset="small-blinn.png">
-                            <source media="(min-width: 601px)" srcset="educationemblems/blinn.png">
-                            <img src="educationemblems/blinn.png" alt="Blinn College" class="education-img">
-                        </picture>
+                        <img src="educationemblems/blinn.png" alt="Blinn College" class="education-img">
                     </a>
                 </li>
-              
                 <li>
                     Associates of Science in Engineering 
-
                     <a href="https://www.southtexascollege.edu/">
-                        <source media="(max-width: 600px)" srcset="educationemblems/STC-Primary.png">
-                        <source media="(min-width: 601px)" srcset="educationemblems/STC-Primary.png">
-                        <img src="educationemblems/STC-Primary.png" class="education-img">
+                        <img src="educationemblems/STC-Primary.png" class="education-img" alt="South Texas College">
                     </a>
                 </li>
-
-            </ol>
+            </ul>
         </section>
+    </main>
 
-        <footer>
-            <p>© 2024 Geralt Heart</p>
-            <p>Contact me for more information</p>        
-            <button onclick="window.location.href='contact.html'">Contact me</button>        </footer>
-    </body>
+    <footer>
+        <p>© 2024 Geralt Heart</p>
+        <p>Contact me for more information</p>        
+        <button onclick="window.location.href='contact.html'">Contact me</button>
+    </footer>
+</body>
 </html>
