@@ -209,6 +209,7 @@ p.github {
 }
 
 .github-img {
+    display: inline-block;
     max-width: 50px; /* Set the maximum width of the images */
     height: auto; /* Maintain aspect ratio */
 }
