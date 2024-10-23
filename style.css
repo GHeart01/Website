@@ -45,7 +45,7 @@ html, body {
     transform: translate(-50%, -50%); /* Centers text perfectly */
     color: #fff; /* Change text color for better visibility */
     z-index: 2; /* Ensures text is above the background image */
-    text-decoration: underline; /* Underline the text */
+    text-decoration: underline; 
 }
 h1, h2 {
     position: relative; 

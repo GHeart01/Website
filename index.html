@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geralt Heart</title>
+    <title>Geralt Heart - Portfolio</title>
     <meta name="description" content="Geralt Heart's personal portfolio website showcasing projects, education, and contact information.">
     <link rel="stylesheet" href="style.css">
-    <script src="animations.js"></script>
+    <script src="animations.js" defer></script>
     <link rel="icon" href="websiteicon/nodes.png" type="image/png">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://github.com/GHeart01">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/geralt-heart-b8a8212b6/">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/geraltheart001/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
@@ -26,57 +26,84 @@
     </div>
 
     <main>
-        <h2>Projects</h2>
-        <p class="github">
-            <a href="https://github.com/GHeart01"> 
-                <picture>
-                    <source media="(max-width: 600px)" srcset="githubicon/github-mark.png">
-                    <source media="(min-width: 601px)" srcset="githubicon/github-mark.png">
-                    <img src="githubicon/github-mark.png" class="github-img" alt="GitHub Mark">
-                </picture>
-                <picture> 
-                    <source media="(max-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
-                    <source media="(min-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
-                    <img src="githubicon/GitHub_Logo.png" class="github-img" alt="GitHub Logo">
-                </picture>
-            </a>
-        </p>
-
-        <h3>Languages</h3>
         <section>
-            <ul class="centered-list">
-                <li>Python</li>
-                <li>C/C++</li>
-                <li>HTML/CSS/JS</li>
-                <li>Assembly - ARM64v8</li>
-            </ul>
+            <h2>Projects</h2>
+            <p class="github">
+                <a href="https://github.com/GHeart01">
+                    <!-- Uncomment the following section if you want to include GitHub logos -->
+                    <!-- <picture>
+                        <source media="(max-width: 600px)" srcset="githubicon/github-mark.png">
+                        <source media="(min-width: 601px)" srcset="githubicon/github-mark.png">
+                        <img src="githubicon/github-mark.png" class="github-img" alt="GitHub Mark">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
+                        <source media="(min-width: 1000px)" srcset="githubicon/GitHub_Logo.png">
+                        <img src="githubicon/GitHub_Logo.png" class="github-img" alt="GitHub Logo">
+                    </picture> -->
+                    Visit my GitHub for projects
+                </a>
+            </p>
         </section>
 
-        <h4>Education</h4>
-        <section class="Degree">
+
+        <section>
+            <h3>Languages and Frameworks</h3>
+            <div class="language-tools">
+                <div class="language-tool">
+                    <img src="images/python-logo.png" alt="Python Logo" class="language-img">
+                    <p>Python</p>
+                </div>
+                <div class="language-tool">
+                    <img src="images/cpp-logo.png" alt="C/C++ Logo" class="language-img">
+                    <p>C/C++</p>
+                </div>
+                <div class="language-tool">
+                    <img src="images/html-css-js-logo.png" alt="HTML/CSS/JS Logo" class="language-img">
+                    <p>HTML/CSS/JS</p>
+                </div>
+                <div class="language-tool">
+                    <img src="images/arm64-logo.png" alt="ARM64 Logo" class="language-img">
+                    <p>Assembly - ARM64v8</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+        <h3>Tools/frameworks</h3>
+        <ul class="centered-list">
+            <li>vscode/xcode/unity</li>
+            <li>github/git</li>
+            <li>Blender</li>
+            <li>pygame/numpy/pandas (python)</li>
+        </ul>
+         </section>
+
+        <section>
+            <h4>Education</h4>
             <ul class="centered-list">
                 <li>
                     Masters of Data Science (In Progress) 
-                    <a href="https://www.colorado.edu/">
-                        <img src="educationemblems/ColoradoUniversity.png" class="education-img" alt="Colorado University">
+                    <a href="https://www.colorado.edu/" aria-label="University of Colorado">
+                        <img src="educationemblems/ColoradoUniversity.png" class="education-img" alt="Colorado University Logo">
                     </a>
                 </li>
                 <li>
                     Bachelors of Science in Mathematics 
-                    <a href="https://www.utrgv.edu/">
+                    <a href="https://www.utrgv.edu/" aria-label="University of Texas Rio Grande Valley">
                         <img src="educationemblems/University-of-Texas-Rio-Grande-Valley-UTRGV-Seal-Logo.png" class="education-img" alt="UTRGV Logo">
                     </a>
                 </li>
                 <li>
                     Associates of Science in Computer Science 
-                    <a href="https://www.blinn.edu/">
-                        <img src="educationemblems/blinn.png" alt="Blinn College" class="education-img">
+                    <a href="https://www.blinn.edu/" aria-label="Blinn College">
+                        <img src="educationemblems/blinn.png" alt="Blinn College Logo" class="education-img">
                     </a>
                 </li>
                 <li>
                     Associates of Science in Engineering 
-                    <a href="https://www.southtexascollege.edu/">
-                        <img src="educationemblems/STC-Primary.png" class="education-img" alt="South Texas College">
+                    <a href="https://www.southtexascollege.edu/" aria-label="South Texas College">
+                        <img src="educationemblems/STC-Primary.png" class="education-img" alt="South Texas College Logo">
                     </a>
                 </li>
             </ul>
