@@ -88,6 +88,8 @@ header {
 }
 ul.centered-list{
     text-align: center;
+    list-style-type: none; /* Remove bullets */
+
 }
 
 /* Navigation menu */
