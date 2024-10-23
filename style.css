@@ -52,7 +52,7 @@ p {
 h1, h2 {
     position: relative; 
     text-align: left;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 0px;
     padding-left: 20px;
 /*add veritcal align with image*/
@@ -154,12 +154,12 @@ input, textarea {
 .language-img {
     width: 50px; /* Set a fixed width for images */
     height: 50px; /* Set a fixed height for images */
-    margin-bottom: 5px; /* Space between image and text */
+    margin-bottom: 15px; /* Space between image and text */
 }
 .language-img2{
     width: 120px; /* Set a fixed width for images */
-    height: 50px; /* Set a fixed height for images */
-    margin-bottom: 5px; /* Space between image and text */
+    height: 45px; /* Set a fixed height for images */
+    margin-bottom: 20px; /* Space between image and text */
 }
 
 .language-tools {
