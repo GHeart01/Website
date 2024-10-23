@@ -12,7 +12,9 @@ html, body {
     background: rgba(240, 240, 240, 0.8); /* Translucent background color */
     color: #000000; /* Text color */
 }
-
+p {
+    text-align: center;
+}
 /* Background image styles */
 .background-image {
     background-image: url('backgroundimages/MountainHeader.png'); /* Set your background image */
@@ -50,7 +52,8 @@ html, body {
 h1, h2 {
     position: relative; 
     text-align: left;
-    padding-top: 200px;
+    padding-top: 100px;
+    padding-bottom: 0px;
     padding-left: 20px;
 /*add veritcal align with image*/
     color: white; /* Text color */
@@ -63,10 +66,13 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     font-size: 4vw; /* Responsive font size */
     color: #000000; /* Subheader color */
 }
-
+h3 {
+    text-align: center;
+}
 header {
     position: absolute;
     top: 0;
