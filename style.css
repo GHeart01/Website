@@ -140,7 +140,27 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.language-img {
+    width: 50px; /* Set a fixed width for images */
+    height: 50px; /* Set a fixed height for images */
+    margin-bottom: 5px; /* Space between image and text */
+}
 
+.language-tools {
+    display: flex; /* Arrange items in a row */
+    flex-wrap: wrap; /* Wrap to the next line if there's not enough space */
+    justify-content: center; /* Center the content */
+    margin-top: 20px; /* Space above the section */
+}
+
+.language-tool {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align items */
+    margin: 15px; /* Space around each tool */
+    text-align: center; /* Center align text below images */
+    font-size: 1em; /* Ensure text size is proportional */
+}
 button {
     background-color: #0FA4AF; /* Button background color */
     color: white;
