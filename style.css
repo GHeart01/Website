@@ -67,7 +67,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 4vw; /* Responsive font size */
+    font-size: 2vw; /* Responsive font size */
     color: #000000; /* Subheader color */
 }
 h3 {
@@ -85,6 +85,9 @@ header {
     padding: 0 40px; /* Padding for breathing room */
     height: 40px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+ul.centered-list{
+    text-align: center;
 }
 
 /* Navigation menu */
