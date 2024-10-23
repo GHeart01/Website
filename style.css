@@ -145,6 +145,11 @@ input, textarea {
     height: 50px; /* Set a fixed height for images */
     margin-bottom: 5px; /* Space between image and text */
 }
+.language-img2{
+    width: 120px; /* Set a fixed width for images */
+    height: 50px; /* Set a fixed height for images */
+    margin-bottom: 5px; /* Space between image and text */
+}
 
 .language-tools {
     display: flex; /* Arrange items in a row */
