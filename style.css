@@ -14,7 +14,7 @@ html, body {
     color: #ffffff; /* Text color */
 }
 .image-container {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%), 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%), 
                 url('backgroundimages/Bluemountains.jpg') no-repeat center center; /* Image and gradient */
     background-size: cover; /* Ensures the image covers the entire container */
     height: 50vh; /* Full viewport height */
@@ -35,6 +35,8 @@ html, body {
 }
 p {
     text-align: center;
+
+    padding-inline: 10%;
 }
 /* Center the GitHub container */
 p.github {
@@ -99,6 +101,11 @@ h2 {
 h3 {
     text-align: center;
 }
+h3 p{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 header {
     position: absolute;
     top: 0;
