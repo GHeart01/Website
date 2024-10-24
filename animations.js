@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
             button.style.transform = 'scale(1)';
         });
     });
+    // For special buttons
+
 
     // Add animation to images (fade in on load)
     const images = document.querySelectorAll('img');
@@ -41,5 +43,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 el.style.transform = 'translateY(0)';
             }
         });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page name
+
+    navLinks.forEach(link => {
+        const linkUrl = link.getAttribute('href');
+        if (linkUrl === currentUrl) {
+            link.classList.add('current-page');
+        }
     });
 });

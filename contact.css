@@ -44,7 +44,19 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #0FA4AF; /* Slight color change on hover */
+}
 
+/* Active link styling */
+nav ul li a.active {
+    color: #0FA4AF; /* Active state color */
+}
+.current-page {
+    text-decoration: underline;
+    font-weight: bold;
+}
 h1, h2 {
     text-align: center;
 }

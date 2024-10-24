@@ -108,6 +108,10 @@ nav ul li a:hover {
 nav ul li a.active {
     color: #0FA4AF; /* Active state color */
 }
+.current-page {
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 /* Main content */
 main {
@@ -165,6 +169,48 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+}
+/* education buttons */
+/* Ensure the list is centered */
+.centered-list {
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center the list items */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove bullets */
+}
+
+/* Style the links as buttons */
+.centered-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline */
+    background-color: transparent; /* No background color */
+    border: none; /* Remove borders */
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Smooth expand effect */
+    color: inherit; /* Maintain text color */
+    text-align: center; /* Center text inside the button */
+}
+
+/* Hover effect: Expand the button slightly */
+.centered-list a:hover {
+    transform: scale(1.1); /* Increase size slightly */
+}
+
+/* Ensure the image and text are centered */
+.centered-list li {
+    display: flex;
+    flex-direction: column; /* Stack the button and text vertically */
+    align-items: center; /* Center the content horizontally */
+    margin: 20px 0; /* Add vertical space between items */
+}
+
+/* Ensure the images don't expand, only the link area */
+.centered-list a img {
+    max-width: 150px; /* Control image size */
+    height: auto;
 }
 
 button:hover {
