@@ -15,7 +15,32 @@ html, body {
 p {
     text-align: center;
 }
+/* Center the GitHub container */
+p.github {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    margin: 0 auto; /* Horizontally center the container */
+    width: 100%; /* Take full width of the page */
+    text-align: center; /* Center the text */
+}
 
+.github-img {
+    width: 50px; /* Set the width for the GitHub icon */
+    height: 50px; /* Set the height for the GitHub icon */
+}
+
+/* Ensure the link and text are centered and styled properly */
+p.github a {
+    color: inherit; /* Keep the same text color */
+    text-decoration: none; /* Remove the underline */
+    font-size: 1.2em; /* Adjust font size */
+}
+
+p.github a:hover {
+    color: #0FA4AF; /* Add a hover effect for the link */
+}
 
 
 
@@ -36,13 +61,13 @@ h1, h2 {
     padding-bottom: 0px;
     padding-left: 20px;
 /*add veritcal align with image*/
-    color: white; /* Text color */
+    color: #000000; /* Text color */
     z-index: 10; /* Ensure text is above the image */
 }
 
 h1 {
     font-size: 6vw; 
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 h2 {
@@ -197,6 +222,8 @@ button {
 /* Hover effect: Expand the button slightly */
 .centered-list a:hover {
     transform: scale(1.1); /* Increase size slightly */
+    color: #0FA4AF; /* Add a hover effect for the link */
+
 }
 
 /* Ensure the image and text are centered */
