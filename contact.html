@@ -41,20 +41,8 @@
                 
                     <button type="submit">Send Message</button>
                 </form>
+                <script src="contact.js" defer></script>
                 
-                <script>
-                    document.getElementById('contact-form').addEventListener('submit', function(event) {
-                        event.preventDefault(); // Prevent the default form submission
-                
-                        emailjs.sendForm('service_56f3mlf', 'template_15wc5cm', this)
-                            .then(function() {
-                                alert('Message sent successfully!');
-                            }, function(error) {
-                                console.error('Failed to send message:', error);
-                                alert('Failed to send message. Please try again later.');
-                            });
-                    });
-                </script>
             </section>
 
             <h2>or look at my profile on other websites</h2>
