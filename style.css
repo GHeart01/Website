@@ -9,8 +9,29 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: Arial, sans-serif; /* Use Arial for consistency */
-    background: rgba(240, 240, 240, 0.8); /* Translucent background color */
-    color: #000000; /* Text color */
+    background: #FFFFFF(240, 240, 240, 0.8); /* Translucent background color */
+    background-color: #333;
+    color: #ffffff; /* Text color */
+}
+.image-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%), 
+                url('backgroundimages/Bluemountains.jpg') no-repeat center center; /* Image and gradient */
+    background-size: cover; /* Ensures the image covers the entire container */
+    height: 50vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative; /* Keeps the element in flow */
+
+}
+
+/* Optional: If you want content to overlay the image with a fade effect */
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust the overlay transparency if needed */
 }
 p {
     text-align: center;
@@ -61,7 +82,7 @@ h1, h2 {
     padding-bottom: 0px;
     padding-left: 20px;
 /*add veritcal align with image*/
-    color: #000000; /* Text color */
+    color: #ffffff; /* Text color */
     z-index: 10; /* Ensure text is above the image */
 }
 
@@ -73,7 +94,7 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2vw; /* Responsive font size */
-    color: #000000; /* Subheader color */
+    color: #ffffff; /* Subheader color */
 }
 h3 {
     text-align: center;
@@ -247,7 +268,7 @@ button:hover {
 /* Footer styles */
 footer {
     margin-top: 20px;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;    
     padding: 10px 20px;
     width: 100%;
