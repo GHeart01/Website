@@ -20,6 +20,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // For special buttons
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page name
+
+    navLinks.forEach(link => {
+        const linkUrl = link.getAttribute('href');
+        if (linkUrl === currentUrl) {
+            link.classList.add('current-page');
+        }
+    });
+});
+
     // Add animation for scroll (fade elements into view)
     const fadeInElements = document.querySelectorAll('.fade-in');
     window.addEventListener('scroll', () => {
@@ -32,17 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 el.style.transform = 'translateY(0)';
             }
         });
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page name
-
-    navLinks.forEach(link => {
-        const linkUrl = link.getAttribute('href');
-        if (linkUrl === currentUrl) {
-            link.classList.add('current-page');
-        }
     });
 });
 
