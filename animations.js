@@ -20,17 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // For special buttons
 
-
-    // Add animation to images (fade in on load)
-    const images = document.querySelectorAll('img');
-    images.forEach(image => {
-        image.style.opacity = '0';
-        image.style.transition = 'opacity 1s ease-in-out';
-        image.addEventListener('load', () => {
-            image.style.opacity = '1';
-        });
-    });
-
     // Add animation for scroll (fade elements into view)
     const fadeInElements = document.querySelectorAll('.fade-in');
     window.addEventListener('scroll', () => {
@@ -56,3 +45,57 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Select the element where the text will be displayed
+const typingTextElement = document.getElementById("typing-text");
+const textToType = [
+    "Hello,",
+    "my name is Geralt", // Just the text without span
+];
+let currentLine = 0; // Track the current line being typed
+let index = 0; // Track the current character index
+
+function typeText() {
+    if (currentLine < textToType.length) {
+        // Create a new h1 element for each line
+        const h1Element = document.createElement("h1");
+        h1Element.className = "welcome-text"; // Add class for styling
+        typingTextElement.appendChild(h1Element); // Append the h1 element to the typing text container
+
+        function typeNextChar() {
+            if (index < textToType[currentLine].length) {
+                // If it's the line with the name, add span for the name
+                if (currentLine === 1 && index === 11) { // At the position where "Geralt" starts
+                    h1Element.innerHTML += "<span style='color: #0FA4AF;'>"; // Start span for name
+                }
+
+                h1Element.innerHTML += textToType[currentLine].charAt(index);
+                index++;
+
+                // If it's the end of the name, close the span
+                if (currentLine === 1 && index === 18) { // After "Geralt"
+                    h1Element.innerHTML += "</span>"; // End span for name
+                }
+
+                setTimeout(typeNextChar, 100); // Adjust typing speed here (in milliseconds)
+            } else {
+                // Move to the next line after a short pause
+                currentLine++;
+                index = 0;
+
+                // Add a line break if there's another line to type
+                if (currentLine < textToType.length) {
+                    typingTextElement.appendChild(document.createElement("br")); // Add a line break
+                }
+
+                // Pause before typing the next line
+                setTimeout(typeText, 500); // Start typing the next line
+            }
+        }
+
+        typeNextChar(); // Start typing the first character
+    }
+}
+
+// Start the typing effect when the window loads
+window.onload = typeText;
