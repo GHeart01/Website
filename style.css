@@ -38,6 +38,10 @@ p {
 
     padding-inline: 10%;
 }
+p.about {
+    padding-left: 200px;
+    padding-right: 200px;
+}
 /* Center the GitHub container */
 p.github {
     display: flex; /* Use flexbox for centering */
@@ -197,6 +201,11 @@ input, textarea {
 .language-img2{
     width: 120px; /* Set a fixed width for images */
     height: 45px; /* Set a fixed height for images */
+    margin-bottom: 20px; /* Space between image and text */
+}
+.language-img3{
+    width: 75px; /* Set a fixed width for images */
+    height: 50px; /* Set a fixed height for images */
     margin-bottom: 20px; /* Space between image and text */
 }
 
