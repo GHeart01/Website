@@ -4,17 +4,18 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-p{
+
+p {
     text-align: center;
 }
+
 p.message {
     text-align: center;
 }
 
 header {
     text-align: center;
-    position: absolute;
-    top: 0;
+    position: relative; /* Changed from absolute to relative */
     z-index: 1000;
     background-color: #333;
     color: #fff;
@@ -25,11 +26,12 @@ header {
     padding: 0 40px; /* Padding for breathing room */
     height: 40px; 
 }
-ul.centered-list{
+
+ul.centered-list {
     text-align: center;
     list-style-type: none; /* Remove bullets */
-
 }
+
 /* Navigation menu */
 nav {
     display: flex;
@@ -44,8 +46,6 @@ nav ul {
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
     text-align: center;
-    display: flex;
-    list-style-type: none;
     gap: 30px; /* Space between links */
 }
 
@@ -66,6 +66,7 @@ nav ul li a:hover {
 nav ul li a.active {
     color: #0FA4AF; /* Active state color */
 }
+
 .current-page {
     text-decoration: underline;
     font-weight: bold;
@@ -74,15 +75,46 @@ nav ul li a.active {
 h6 {
     text-align: center;
 }
+
 ul {
     text-align: center;
     padding-left: 30%;
 }
-li{
+
+li {
     text-align: left;
-
-
 }
+.fullscreen-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+    color: #fff;
+    z-index: 9999; /* On top of other elements */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fullscreen-menu.active {
+    display: flex; /* Show when active */
+}
+
+.fullscreen-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -90,14 +122,13 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 15px 0; /* Space for full-screen menu */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    font-size: 1.5em; /* Larger text for easier tapping */
 }
+
 /* Hover effect for navigation links */
 nav ul li a:hover {
     color: #0FA4AF; /* Slight color change on hover */
@@ -107,10 +138,12 @@ nav ul li a:hover {
 nav ul li a.active {
     color: #0FA4AF; /* Active state color */
 }
+
 .current-page {
     text-decoration: underline;
     font-weight: bold;
 }
+
 h1, h2 {
     text-align: center;
     padding-top: 40px;
@@ -165,6 +198,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 /* Menu button styling */
 .menu-toggle {
     display: none;
@@ -181,9 +215,11 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
     nav ul.active {
         display: flex; /* Show navigation links when active */
     }
+
     .menu-toggle {
         display: block; /* Show the menu toggle button */
     }
