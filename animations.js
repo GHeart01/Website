@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Add animation to the header
+    // Fade-in header animation
     const header = document.querySelector('header');
     header.style.opacity = '0';
     setTimeout(() => {
@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         header.style.opacity = '1';
     }, 500);
 
-    // Add animation to buttons (expand on hover)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    
+    // Button animations on hover
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
@@ -18,12 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
             button.style.transform = 'scale(1)';
         });
     });
-    // For special buttons
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Highlight current page link
     const navLinks = document.querySelectorAll('nav ul li a');
-    const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page name
+    const currentUrl = window.location.pathname.split('/').pop();
 
     navLinks.forEach(link => {
         const linkUrl = link.getAttribute('href');
@@ -31,15 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('current-page');
         }
     });
-});
 
-    // Add animation for scroll (fade elements into view)
+    // Scroll fade-in animation
     const fadeInElements = document.querySelectorAll('.fade-in');
     window.addEventListener('scroll', () => {
         fadeInElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-
             if (elementTop < windowHeight - 100) {
                 el.style.opacity = '1';
                 el.style.transform = 'translateY(0)';
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 // Select the element where the text will be displayed
 const typingTextElement = document.getElementById("typing-text");
