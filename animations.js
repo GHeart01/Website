@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
 // Select the element where the text will be displayed
 const typingTextElement = document.getElementById("typing-text");
 const textToType = [
@@ -104,4 +102,4 @@ function typeText() {
 }
 
 // Start the typing effect when the window loads
-window.onload = typeText;
+window.onload = typeText; 
