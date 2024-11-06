@@ -100,7 +100,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 2vw;
+    /* font-size: 2vw; */
 }
 
 h3 {
@@ -110,6 +110,9 @@ h3 {
 h3 p {
     padding-left: 20%;
     padding-right: 20%;
+}
+h3.resume {
+    padding-top: 5%;
 }
 
 /* Header */
