@@ -1,3 +1,13 @@
+//header 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navOverlay = document.querySelector(".nav-overlay");
+
+    menuToggle.addEventListener("click", () => {
+        navOverlay.classList.toggle("active");
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Fade-in header animation
     const header = document.querySelector('header');

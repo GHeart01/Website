@@ -193,7 +193,7 @@ button:active {
 
 footer {
     text-align: center;
-    padding: 10px 0 0 0;
+    padding: 10px 0 10px 0;
     background-color: #333;
     color: white;
     position: relative;
@@ -216,10 +216,22 @@ footer {
         display: none; /* Hide navigation links by default */
         flex-direction: column;
         gap: 10px;
+        
     }
-
+    nav ul.nav-menu{
+        
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        z-index: -1;
+    }
     nav ul.active {
         display: flex; /* Show navigation links when active */
+        
     }
 
     .menu-toggle {

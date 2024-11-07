@@ -147,6 +147,8 @@ ul.centered-list {
 }
 
 /* Navigation menu */
+
+
 nav {
     display: flex;
     justify-content: center;
@@ -285,7 +287,7 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     header {
-        padding: 10px;
+        padding: 30% 10% 10% 30%;
         height: auto;
     }
 
@@ -293,10 +295,25 @@ footer {
         display: inline-block;
     }
 
+    .back-arrow{
+        display: inline-block;
+    }
+
     nav ul {
         display: none; /* Hide menu by default */
         flex-direction: column;
-        gap: 10px;
+        gap: 0px;
+    }
+
+    nav ul.nav-menu{
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+        z-index: -1;
     }
 
     nav ul.active {
