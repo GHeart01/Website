@@ -85,9 +85,28 @@ ul {
 
 li {
     text-align: left;
+
 }
+li.nav-menu{
+    color: white;
+    text-align: center;
+
+    /* padding: 10% 0 0 0; */
+}
+
+ul.nav-menu {
+    text-align: left;
+    list-style-type: none; /* list type for mobile*/
+    /* padding: 0 0 0 0;  */
+
+}
+nav ul li a.active {
+    color: #0FA4AF;
+}
+
 .fullscreen-menu {
     display: none; /* Hidden by default */
+
     position: fixed;
     top: 0;
     left: 0;
@@ -119,16 +138,19 @@ li {
 
 nav ul {
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
     margin: 15px 0; /* Space for full-screen menu */
+
 }
 
 nav ul li a {
     font-size: 1.5em; /* Larger text for easier tapping */
+
 }
 
 /* Hover effect for navigation links */
@@ -214,12 +236,12 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Hide navigation links by default */
+
         flex-direction: column;
         gap: 10px;
         
     }
     nav ul.nav-menu{
-        
         text-align: center;
         position: fixed;
         top: 0;
@@ -236,5 +258,7 @@ footer {
 
     .menu-toggle {
         display: block; /* Show the menu toggle button */
-    }
+        font-size: 20px;
+        padding: 0px 20px 0px 20px;
+        }
 }
