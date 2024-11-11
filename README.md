@@ -37,4 +37,4 @@ This website is designed to provide an overview of my background and work, with 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
+   git clone https://github.com/GHeart01/Website.git
