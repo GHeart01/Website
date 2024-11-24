@@ -1,3 +1,18 @@
+/*custom fonts*/
+@font-face {
+    font-family: 'SFMonoRegular'; /* Name your font */
+    src: url('fonts/SFMonoRegular.woff') format('woff'); /* Path to your font */
+    font-weight: normal; /* Optional: Specify the weight */
+    font-style: normal; /* Optional: Specify the style */
+}
+@font-face {
+    font-family: 'SFMonoRegular';
+    src: url('../fonts/SFMonoRegular.woff2') format('woff2'),
+         url('../fonts/SFMonoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General reset and full-width settings */
 * {
     margin: 0;
@@ -12,7 +27,7 @@ body {
 html, body {
     width: 100%;
     height: 100%;
-    font-family: "FreeMono" , monospace, sans-serif; /* Use Arial for consistency */
+    font-family: 'SFMonoRegular', monospace; 
     background-color: #333;
     color: #ffffff; /* Text color */
 }
