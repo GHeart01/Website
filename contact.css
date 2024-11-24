@@ -29,6 +29,26 @@ header {
     height: 40px; 
 }
 
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;    /* Center horizontally */
+    min-height: 100%;       /* Ensure full height */
+    text-align: center;     /* Center text inside list items */
+  }
+  
+  .info {
+    list-style-position: inside; /* Keeps bullets inside the list container */
+    margin: 0;
+    padding: 0;
+    text-align: left;  /* Align text to the left for a cleaner appearance */
+}
+.info li {
+    margin-bottom: 5px; /* Add space between list items */
+  }  
+
+
 ul.centered-list {
     text-align: center;
     list-style-type: none; /* Remove bullets */
@@ -215,10 +235,13 @@ button:active {
 
 footer {
     text-align: center;
+    flex-direction: column;
+
+    margin: 0;
     padding: 10px 0 10px 0;
     background-color: #333;
     color: white;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
