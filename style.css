@@ -7,8 +7,8 @@
 }
 @font-face {
     font-family: 'SFMonoRegular';
-    src: url('../fonts/SFMonoRegular.woff2') format('woff2'),
-         url('../fonts/SFMonoRegular.woff') format('woff');
+    /* src: url('fonts/SFMonoRegular.woff2') format('woff2'), */
+         url('fonts/SFMonoRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
