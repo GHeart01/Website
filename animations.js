@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-// Select the element where the text will be displayed
+
+
 const typingTextElement = document.getElementById("typing-text");
 const textToType = [
     "Hello,",
