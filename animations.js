@@ -60,38 +60,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
 const typingTextElement = document.getElementById("typing-text");
-const textToType = [
-    "Hello,",
-    "my name is Geralt", // Just the text without span
-];
+const linesToType = Array.from(typingTextElement.children); // Fetch all child elements (h1 tags)
 let currentLine = 0; // Track the current line being typed
 let index = 0; // Track the current character index
 
+// Clear the content initially
+typingTextElement.innerHTML = "";
+
 function typeText() {
-    if (currentLine < textToType.length) {
-        // Create a new h1 element for each line
+    if (currentLine < linesToType.length) {
+        // Get the current line's innerHTML
+        const lineHTML = linesToType[currentLine].innerHTML; // Raw HTML content
         const h1Element = document.createElement("h1");
-        h1Element.className = "welcome-text"; // Add class for styling
-        typingTextElement.appendChild(h1Element); // Append the h1 element to the typing text container
+        h1Element.className = "welcome-text";
+        typingTextElement.appendChild(h1Element);
+
+        // Separate tags and text
+        const fragments = parseHTML(lineHTML);
 
         function typeNextChar() {
-            if (index < textToType[currentLine].length) {
-                // If it's the line with the name, add span for the name
-                if (currentLine === 1 && index === 11) { // At the position where "Geralt" starts
-                    h1Element.innerHTML += "<span style='color: #0FA4AF;'>"; // Start span for name
-                }
-
-                h1Element.innerHTML += textToType[currentLine].charAt(index);
+            if (index < fragments.visibleText.length) {
+                h1Element.innerHTML = assembleHTML(fragments, index); // Assemble up to the current index
                 index++;
-
-                // If it's the end of the name, close the span
-                if (currentLine === 1 && index === 18) { // After "Geralt"
-                    h1Element.innerHTML += "</span>"; // End span for name
-                }
-
                 setTimeout(typeNextChar, 100); // Adjust typing speed here (in milliseconds)
             } else {
                 // Move to the next line after a short pause
@@ -99,12 +90,11 @@ function typeText() {
                 index = 0;
 
                 // Add a line break if there's another line to type
-                if (currentLine < textToType.length) {
-                    typingTextElement.appendChild(document.createElement("br")); // Add a line break
+                if (currentLine < linesToType.length) {
+                    typingTextElement.appendChild(document.createElement("br"));
                 }
 
-                // Pause before typing the next line
-                setTimeout(typeText, 500); // Start typing the next line
+                setTimeout(typeText, 300); // Pause before typing the next line
             }
         }
 
@@ -112,5 +102,64 @@ function typeText() {
     }
 }
 
+// Utility to parse raw HTML into visible text and tags
+function parseHTML(html) {
+    const visibleText = []; // Array of visible characters
+    const tags = []; // Array of HTML tags with their positions
+
+    let insideTag = false;
+    let currentTag = '';
+    let position = 0;
+
+    for (let char of html) {
+        if (char === '<') {
+            insideTag = true;
+            currentTag = char;
+        } else if (char === '>') {
+            insideTag = false;
+            currentTag += char;
+            tags.push({ tag: currentTag, position });
+        } else if (insideTag) {
+            currentTag += char;
+        } else {
+            visibleText.push(char); // Collect visible text
+            position++;
+        }
+    }
+
+    return { visibleText, tags };
+}
+
+// Utility to assemble HTML up to the current index
+function assembleHTML(fragments, currentIndex) {
+    const { visibleText, tags } = fragments;
+    let result = '';
+    let visibleCharIndex = 0;
+
+    for (let i = 0; i < visibleText.length; i++) {
+        // Add any tags that match the current position
+        for (const tag of tags) {
+            if (tag.position === visibleCharIndex) {
+                result += tag.tag; // Add the tag to the result
+            }
+        }
+
+        // Add the next visible character up to the current index
+        if (i <= currentIndex) {
+            result += visibleText[i];
+            visibleCharIndex++;
+        }
+    }
+
+    // Close any unclosed tags
+    for (const tag of tags) {
+        if (tag.position >= visibleCharIndex) {
+            result += tag.tag; // Add remaining tags at the end
+        }
+    }
+
+    return result;
+}
+
 // Start the typing effect when the window loads
-window.onload = typeText; 
+window.onload = typeText;

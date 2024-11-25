@@ -7,8 +7,6 @@ Welcome to the repository for my personal website, a responsive, modern portfoli
 - [About](#about)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Usage](#usage)
-- [Contact](#contact)
 
 ## About
 

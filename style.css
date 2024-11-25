@@ -25,8 +25,9 @@ html, body {
 }
 
 .image-container {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%),
-        url('backgroundimages/Bluemountains.jpg') no-repeat center center; /* Image and gradient */
+    background-color: black;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%),
+        url('backgroundimages/Bluemountains.jpg') no-repeat center center; Image and gradient */
     background-size: cover; /* Ensures the image covers the entire container */
     height: 50vh; /* Full viewport height */
     width: 100%; /* Full width */
@@ -45,11 +46,13 @@ html, body {
 }
 
 p {
+    padding-top: 20px;
     text-align: center;
     padding-inline: 10%;
 }
 
 p.about {
+    padding-bottom: 10px;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -60,6 +63,7 @@ p.github {
     flex-direction: column; /* Stack image and text vertically */
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
+    padding-bottom: 50px;
     margin: 0 auto; /* Center container */
     width: 100%; /* Full width */
     text-align: center;
@@ -111,6 +115,7 @@ h2 {
 }
 
 h3 {
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -350,11 +355,17 @@ footer {
 
 
 #typing-text {
+    height: 50vh; /* Set height to 50% of the viewport */
+    overflow: hidden; /* Prevent overflow of text if needed */
+
     position: relative;
     margin-top: 20px; /* Adjust based on header height */
     padding: 10px 10px 30px 10px;
     text-align: center;
     z-index: 1;
+}
+.welcome-text {
+    color: inherit;
 }
 
 header {
