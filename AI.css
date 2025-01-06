@@ -1,0 +1,384 @@
+/*custom fonts*/
+@font-face {
+    font-family: 'SFMonoRegular'; 
+    src: url('/fonts/SFMonoRegular.woff') format('woff'); 
+    }
+    
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'SFMonoRegular'; }
+
+/* General reset and full-width settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(240, 240, 240, 0.8); /* Translucent background color */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'SFMonoRegular'; 
+    background-color: #333;
+    color: #ffffff; /* Text color */
+}
+
+.image-container {
+    background-color: black;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%),
+        url('backgroundimages/Bluemountains.jpg') no-repeat center center; Image and gradient */
+    background-size: cover; /* Ensures the image covers the entire container */
+    height: 50vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative; /* Keeps the element in flow */
+}
+
+/* Optional: Overlay with fade effect */
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay transparency */
+}
+
+p {
+    padding-top: 20px;
+    text-align: center;
+    padding-inline: 10%;
+}
+
+p.about {
+    padding-bottom: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Center GitHub container */
+p.github {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding-bottom: 50px;
+    margin: 0 auto; /* Center container */
+    width: 100%; /* Full width */
+    text-align: center;
+}
+
+.github-img {
+    width: 50px; /* GitHub icon size */
+    height: 50px;
+}
+
+p.github a {
+    color: inherit; /* Same text color */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+p.github a:hover {
+    color: #0FA4AF; /* Hover effect */
+}
+
+/* Greeting and intro */
+.greeting, .Intro {
+    position: absolute;
+    top: 20%; /* Vertical spacing */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: #fff;
+    z-index: 2; /* Above background image */
+    text-decoration: underline; 
+}
+
+h1, h2 {
+    position: relative;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 20px;
+    color: #ffffff;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 6vw;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    /* font-size: 2vw; */
+}
+
+h3 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+h3 p {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+h3.resume {
+    padding-top: 5%;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+}
+
+/* Menu toggle button for small screens */
+.menu-toggle {
+    font-size: 1.5em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Default hidden */
+}
+
+/* Centered list */
+ul.centered-list {
+    text-align: center;
+    list-style-type: none;
+}
+
+/* Navigation menu */
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 15px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #0FA4AF;
+}
+
+nav ul li a.active {
+    color: #0FA4AF;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+}
+
+/* Language icons */
+.language-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.language-img2 {
+    width: 120px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.language-img3 {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.language-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.language-tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    text-align: center;
+    font-size: 1em;
+}
+
+button {
+    background-color: #0FA4AF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #AFDDE5;
+}
+
+/* Education buttons */
+.centered-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.centered-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.centered-list a:hover {
+    transform: scale(1.1);
+    color: #0FA4AF;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background-color: #000000;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 30% 10% 10% 30%;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .back-arrow{
+        display: inline-block;
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    nav ul.nav-menu{
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+        z-index: -1;
+    }
+
+    nav ul.active {
+        display: flex; /* Show on toggle */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+/* Education images */
+.education-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+}
+
+/* JS */
+/* Ensure the container for the welcome text starts below the header */
+
+
+#typing-text {
+    height: 50vh; /* Set height to 50% of the viewport */
+    overflow: hidden; /* Prevent overflow of text if needed */
+
+    position: relative;
+    margin-top: 20px; /* Adjust based on header height */
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    z-index: 1;
+}
+.welcome-text {
+    color: inherit;
+}
+
+header {
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; /* Adjust to the actual height of your header */
+    background-color: #333;
+    color: #fff;
+    padding: 0 40px;
+}
