@@ -50,6 +50,8 @@ html, body {
 }
 
 p {
+
+    color: white;
     padding-top: 20px;
     text-align: center;
     padding-inline: 10%;
@@ -292,7 +294,7 @@ button:hover {
 
 /* Footer */
 footer {
-    margin-top: 20px;
+    margin-top: 75%;
     background-color: #000000;
     padding: 10px 20px;
     width: 100%;
