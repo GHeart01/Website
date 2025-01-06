@@ -1,5 +1,11 @@
+/*custom fonts*/
+@font-face {
+    font-family: 'SFMonoRegular'; 
+    src: url('/fonts/SFMonoRegular.woff') format('woff'); 
+    }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'SFMonoRegular';;
     position: relative;
     margin: 0;
     padding: 0;
@@ -21,17 +27,14 @@ p.linkedin {
 }
 
 header {
-    text-align: center;
-    position: relative; /* Changed from absolute to relative */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    width: 100%;
     z-index: 1000;
+    height: 60px; /* Adjust to the actual height of your header */
     background-color: #333;
     color: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Spacing between logo and nav */
-    align-items: center;
-    /* padding: 0 0px; Padding for breathing room */
-    height: 40px; 
+    padding: 0 40px;
 }
 
 .info-container {
@@ -60,38 +63,37 @@ ul.centered-list {
 }
 
 /* Navigation menu */
+
+
 nav {
     display: flex;
     justify-content: center;
-    flex-grow: 1; /* Make it grow to fill space */
+    flex-grow: 1;
 }
 
 nav ul {
-    list-style: none; /* Removes default list styling */
-    display: flex; /* Aligns items in a row */
-    justify-content: space-around; /* Distributes items evenly */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    text-align: center;
-    gap: 30px; /* Space between links */
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
 }
 
 nav ul li a {
-    color: #FFFFFF; /* Link color */
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1em;
-    padding: 15px 10px; /* Padding for clickable area */
-    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+    padding: 15px 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for navigation links */
 nav ul li a:hover {
-    color: #0FA4AF; /* Slight color change on hover */
+    color: #0FA4AF;
 }
 
-/* Active link styling */
 nav ul li a.active {
-    color: #0FA4AF; /* Active state color */
+    color: #0FA4AF;
 }
 
 .current-page {
@@ -239,16 +241,12 @@ button:active {
 }
 
 footer {
-    text-align: center;
-    flex-direction: column;
-
-    /* margin: 10% 0 0 0; */
-    padding: 10px 0 10px 0;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    bottom: 0;
+    margin-top: 20px;
+    background-color: #000000;
+    padding: 10px 20px;
     width: 100%;
+    text-align: center;
+    color: white;
 }
 
 /* Menu button styling */
@@ -261,6 +259,8 @@ footer {
 }
 
 /* Responsive design to display menu button */
+
+
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Hide navigation links by default */
@@ -289,4 +289,13 @@ footer {
         font-size: 20px;
         padding: 0px 20px 0px 20px;
         }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
 }

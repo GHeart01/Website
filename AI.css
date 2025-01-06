@@ -24,12 +24,12 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'SFMonoRegular'; 
-    background-color: #333;
+    background-color: #35002a;
     color: #ffffff; /* Text color */
 }
 
 .image-container {
-    background-color: black;
+    background-color: 35002a;
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%),
         url('backgroundimages/Bluemountains.jpg') no-repeat center center; Image and gradient */
     background-size: cover; /* Ensures the image covers the entire container */
@@ -87,7 +87,7 @@ p.github a {
 }
 
 p.github a:hover {
-    color: #0FA4AF; /* Hover effect */
+    color: #ff00b7; /* Hover effect */
 }
 
 /* Greeting and intro */
@@ -191,11 +191,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #0FA4AF;
+    color: #ff00b7;
 }
 
 nav ul li a.active {
-    color: #0FA4AF;
+    color: #ff00b7;
 }
 
 /* Main content */
@@ -267,7 +267,7 @@ button {
 }
 
 button:hover {
-    background-color: #AFDDE5;
+    background-color: #ff00b7;
 }
 
 /* Education buttons */
