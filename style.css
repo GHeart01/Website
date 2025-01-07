@@ -88,6 +88,31 @@ p.github a:hover {
     color: #0FA4AF; /* Hover effect */
 }
 
+/* Education images */
+.education-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+}
+
+/* JS */
+/* Ensure the container for the welcome text starts below the header */
+
+
+#typing-text {
+    height: 50vh; /* Set height to 50% of the viewport */
+    overflow: hidden; /* Prevent overflow of text if needed */
+
+    position: relative;
+    margin-top: 20px; /* Adjust based on header height */
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    z-index: 1;
+}
+.welcome-text {
+    color: inherit;
+}
+
 /* Greeting and intro */
 .greeting, .Intro {
     position: absolute;
@@ -128,23 +153,24 @@ h3 p {
     padding-right: 20%;
 }
 h3.resume {
-    padding-top: 5%;
+    padding-top: 3%;
 }
 
 /* Header */
 header {
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    background-color: #000000;
-    color: #fff;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; /* Adjust to the actual height of your header */
+    background-color: #333;
+    color: #fff;
     padding: 0 40px;
-    height: 60px;
 }
+
 
 /* Menu toggle button for small screens */
 .menu-toggle {
@@ -303,7 +329,7 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     header {
-        padding: 30% 10% 10% 30%;
+        padding: 10px 20px;
         height: auto;
     }
 
@@ -347,38 +373,5 @@ footer {
     }
 }
 
-/* Education images */
-.education-img {
-    display: block;
-    margin: 10px auto;
-    max-width: 200px;
-}
-
-/* JS */
-/* Ensure the container for the welcome text starts below the header */
 
 
-#typing-text {
-    height: 50vh; /* Set height to 50% of the viewport */
-    overflow: hidden; /* Prevent overflow of text if needed */
-
-    position: relative;
-    margin-top: 20px; /* Adjust based on header height */
-    padding: 10px 10px 30px 10px;
-    text-align: center;
-    z-index: 1;
-}
-.welcome-text {
-    color: inherit;
-}
-
-header {
-    position: fixed; /* Keep the header fixed at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 60px; /* Adjust to the actual height of your header */
-    background-color: #333;
-    color: #fff;
-    padding: 0 40px;
-}

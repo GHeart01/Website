@@ -24,12 +24,12 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'SFMonoRegular'; 
-    background-color: #35002a;
+    background-color: #333;
     color: #ffffff; /* Text color */
 }
 
 .image-container {
-    background-color: 35002a;
+    background-color: black;
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #333 100%),
         url('backgroundimages/Bluemountains.jpg') no-repeat center center; Image and gradient */
     background-size: cover; /* Ensures the image covers the entire container */
@@ -50,8 +50,6 @@ html, body {
 }
 
 p {
-
-    color: white;
     padding-top: 20px;
     text-align: center;
     padding-inline: 10%;
@@ -87,7 +85,32 @@ p.github a {
 }
 
 p.github a:hover {
-    color: #ff00b7; /* Hover effect */
+    color: #0FA4AF; /* Hover effect */
+}
+
+/* Education images */
+.education-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+}
+
+/* JS */
+/* Ensure the container for the welcome text starts below the header */
+
+
+#typing-text {
+    height: 50vh; /* Set height to 50% of the viewport */
+    overflow: hidden; /* Prevent overflow of text if needed */
+
+    position: relative;
+    margin-top: 20px; /* Adjust based on header height */
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    z-index: 1;
+}
+.welcome-text {
+    color: inherit;
 }
 
 /* Greeting and intro */
@@ -111,6 +134,7 @@ h1, h2 {
 }
 
 h1 {
+    padding-top: 70px;
     font-size: 6vw;
     text-decoration: none;
 }
@@ -130,23 +154,24 @@ h3 p {
     padding-right: 20%;
 }
 h3.resume {
-    padding-top: 5%;
+    padding-top: 3%;
 }
 
 /* Header */
 header {
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    background-color: #000000;
-    color: #fff;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; /* Adjust to the actual height of your header */
+    background-color: #333;
+    color: #fff;
     padding: 0 40px;
-    height: 60px;
 }
+
 
 /* Menu toggle button for small screens */
 .menu-toggle {
@@ -191,11 +216,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff00b7;
+    color: #0FA4AF;
 }
 
 nav ul li a.active {
-    color: #ff00b7;
+    color: #0FA4AF;
 }
 
 /* Main content */
@@ -267,7 +292,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff00b7;
+    background-color: #AFDDE5;
 }
 
 /* Education buttons */
@@ -294,7 +319,7 @@ button:hover {
 
 /* Footer */
 footer {
-    margin-top: 75%;
+    margin-top: 20px;
     background-color: #000000;
     padding: 10px 20px;
     width: 100%;
@@ -305,7 +330,7 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
     header {
-        padding: 30% 10% 10% 30%;
+        padding: 10px 20px;
         height: auto;
     }
 
@@ -349,38 +374,5 @@ footer {
     }
 }
 
-/* Education images */
-.education-img {
-    display: block;
-    margin: 10px auto;
-    max-width: 200px;
-}
-
-/* JS */
-/* Ensure the container for the welcome text starts below the header */
 
 
-#typing-text {
-    height: 50vh; /* Set height to 50% of the viewport */
-    overflow: hidden; /* Prevent overflow of text if needed */
-
-    position: relative;
-    margin-top: 20px; /* Adjust based on header height */
-    padding: 10px 10px 30px 10px;
-    text-align: center;
-    z-index: 1;
-}
-.welcome-text {
-    color: inherit;
-}
-
-header {
-    position: fixed; /* Keep the header fixed at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 60px; /* Adjust to the actual height of your header */
-    background-color: #333;
-    color: #fff;
-    padding: 0 40px;
-}

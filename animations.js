@@ -1,21 +1,7 @@
 //header 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navOverlay = document.querySelector(".nav-overlay");
 
-    menuToggle.addEventListener("click", () => {
-        navOverlay.classList.toggle("active");
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Fade-in header animation
-    // const header = document.querySelector('header');
-    // header.style.opacity = '0';
-    // setTimeout(() => {
-    //     header.style.transition = 'opacity 2s';
-    //     header.style.opacity = '1';
-    // }, 500);
 
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
