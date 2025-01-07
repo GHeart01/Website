@@ -79,31 +79,6 @@ nav {
     flex-grow: 1;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1em;
-    padding: 15px 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #0FA4AF;
-}
-
-nav ul li a.active {
-    color: #0FA4AF;
-}
-
 .current-page {
     text-decoration: underline;
     font-weight: bold;
@@ -183,35 +158,6 @@ nav ul.active {
     cursor: pointer;
 }
 
-/* Menu toggle button for small screens */
-.menu-toggle {
-    font-size: 1.5em;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* Display inline on small screens */
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-    }
-
-    nav ul.active {
-        display: flex; /* Show on toggle */
-    }
-}
 
 nav ul {
     list-style: none;
@@ -353,5 +299,93 @@ footer {
 
     nav ul {
         gap: 20px;
+    }
+}
+
+/*replacement*/
+/* Base styles for navigation */
+nav ul {
+    list-style: none;
+    display: flex; /* Horizontal layout for larger screens */
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 15px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #0FA4AF;
+}
+
+nav ul li a.active {
+    color: #0FA4AF;
+}
+
+/* Menu toggle button for small screens */
+.menu-toggle {
+    font-size: 1.5em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+/* Fullscreen navigation menu (mobile view) */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide horizontal menu */
+        flex-direction: column; /* Stack items vertically */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    nav ul li {
+        margin: 20px 0; /* Space between items */
+    }
+
+    nav ul li a {
+        font-size: 1.5em; /* Larger text for easier tapping */
+    }
+
+    .menu-toggle {
+        display: inline-block; /* Show toggle button */
+    }
+}
+
+/* Maintain horizontal layout on larger screens */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Show horizontal menu */
+        flex-direction: row;
+        position: static;
+        background: none;
+    }
+
+    nav ul li {
+        margin: 0; /* Reset spacing */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide toggle button */
     }
 }
